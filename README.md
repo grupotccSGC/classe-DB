@@ -1,11 +1,11 @@
 # classe-DB
-# classe que executar as operaçoes basica(SELECT ,INSERT,UPDATE,DELETE) do banco de dados mysql
+## classe que executar as operaçoes basica(SELECT ,INSERT,UPDATE,DELETE) do banco de dados mysql
 
 ## Retorna o id que foi cadastrado
 > echo DB::insert('user',['nome'=>'felipe','idade'=>23,'local'=>'RJ']);
 
 ## Retorna todos os dados da tabela user
-> DB::get('user')
+> DB::get('user');
 
 
 ## Retorna o numero de linas afetadas 
@@ -24,13 +24,13 @@
 > echo DB::pagination('user',$limit,$offset);
 
 ## EXECUTAR O SELECT
-> DB::select_query('SELECT * FROM user')
+> DB::select_query('SELECT * FROM user');
 
 ## EXECUTAR O DELETE
 > DB::delete_query('DELETE FROM user WHERE id = ?',[5]);
  
 ## EXECUTAR O UPDATE
-> DB::update_query('UPDATE user SET nome = ?,idade =? WHERE id=?',['nome teste',2367,4])
+> DB::update_query('UPDATE user SET nome = ?,idade =? WHERE id=?',['nome teste',2367,4]);
 
 ## EXECUTAR O INSERT 
 > DB::insert_query("INSERT INTO user (nome,idades,locals) VALUES(?,?,?)",['nome-teste',2222,'MG']);
