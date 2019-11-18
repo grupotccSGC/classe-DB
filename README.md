@@ -1,14 +1,14 @@
 # classe-DB
 ## classe que executar as operaçoes basica(SELECT ,INSERT,UPDATE,DELETE) do banco de dados mysql
 
-## Retorna o id que foi cadastrado
+## RETORNA O ID QUE FOI CADASTRADO;
 > echo DB::insert('user',['nome'=>'felipe','idade'=>23,'local'=>'RJ']);
 
-## Retorna todos os dados da tabela user
+## RETORNA TODOS OS DADOS DA TABELA user
 > DB::get('user');
 
 
-## Retorna o numero de linas afetadas 
+## RETORNA O NUMERO DE LINHAS AFETADAS  
 > $update = ['nome' =>'lucas','idade' =>12,'local'=>'RJ'];
 > $where = ['id' => 5];
 > echo DB::update('user',$update,$where);
@@ -18,7 +18,7 @@
 ## APAGAR TODOS OS REGISTRO DA TABELA.
 > DB::limpar('user');
 
-## REAliza a paginação 
+## REALIZA A PAGINAÇÂO 
 > $offset = 1;
 > $limit = 2;
 > echo DB::pagination('user',$limit,$offset);
